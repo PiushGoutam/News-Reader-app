@@ -26,6 +26,7 @@ class FetchNews():
         briefs = soup.findAll('div',{'class':'brief_box'})
         logging.info(' {} Briefs found.'.format(len(briefs)))
         sections = set([i.text.replace('/n','') for i in soup.findAll('span',{'class':'subsection_card'})])
+        print(sections)
         logging.info(' {} Sections Found.'.format(len(sections)))
         news_feed = {k:[] for k in sections}
         for brief in briefs:

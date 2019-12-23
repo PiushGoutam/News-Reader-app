@@ -36,7 +36,7 @@ class MainApp:
 
 
         self.fetch_label = tk.Label(self.frame1,
-                                    text = "Read Top News, Headlines, Sports,Business, Entertainment\n..All in one place!",
+                                    text = "Read Top News, Headlines, Sports,Business, Entertainment  News\n..All in one place!",
                                     font = ('Ubuntu condensed',12),
                                     fg = 'orange',
                                     bg = 'gray19')
@@ -61,6 +61,9 @@ class MainApp:
         photo2 = PhotoImage(file = "science.png")
         photo3 = PhotoImage(file = "india.png")
         photo4 = PhotoImage(file = "entertainment.png")
+        photo5 = PhotoImage(file = "business.png")
+        photo6 = PhotoImage(file = "world.png")
+        photo7 = PhotoImage(file = "miscellaneous.png")
         
         c1 = tk.Button(self.parent_label1,text='City',image=photo1 ,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
                        borderwidth=0 ,highlightthickness = 0)
@@ -74,16 +77,25 @@ class MainApp:
         c4 = tk.Button(self.parent_label1,text='yes',image = photo4,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
                        borderwidth=0 ,highlightthickness =0)
         c4.image = photo4
-        c5 = tk.Button(self.parent_label1,text='yes')
-        c6 = tk.Button(self.parent_label1,text='yes')
+        c5 = tk.Button(self.parent_label1,text='yes',image = photo5,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
+                       borderwidth=0 ,highlightthickness =0)
+        c5.image = photo5
+
+        c6 = tk.Button(self.parent_label1,text='yes',image = photo6,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
+                       borderwidth=0 ,highlightthickness =0)
+        c6.image = photo6
+        c7 = tk.Button(self.parent_label1,text='yes',image = photo7,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
+                       borderwidth=0 ,highlightthickness =0)
+        c7.image = photo7
 
 
         c1.grid(row=0,column=0,padx = 20,pady = 20)
         c2.grid(row=0,column=1,padx = 20,pady = 20)
         c3.grid(row=0,column=2,padx = 20,pady = 20)
         c4.grid(row=0,column=3,padx = 20,pady = 20)
-        c5.grid(row=1,column=0)
-        c6.grid(row=1,column=1)
+        c5.grid(row=1,column=0,padx = 20,pady = 20)
+        c6.grid(row=1,column=1,padx = 20,pady = 20)
+        c7.grid(row=1,column=2,padx = 20,pady = 20)
 
         root.mainloop()
         
