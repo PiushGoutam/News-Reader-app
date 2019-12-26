@@ -1,13 +1,9 @@
 import tkinter as tk
 from bs4 import *
 from tkinter import *
-import urllib
 from PIL import Image, ImageTk
-import io
 import time
-import datetime as dt
 
-date = dt.datetime.now()
 
 class MainApp:
 
@@ -57,35 +53,49 @@ class MainApp:
         self.parent_label1 = tk.Label(self.frame2,bg = 'gray19')
         self.parent_label1.pack(fill = tk.X,padx = 10)
 
-        photo1 = PhotoImage(file = "city.png")
+       
+        photo1 = ImageTk.PhotoImage(Image.open('city.jpeg','r'))
         photo2 = PhotoImage(file = "science.png")
         photo3 = PhotoImage(file = "india.png")
         photo4 = PhotoImage(file = "entertainment.png")
         photo5 = PhotoImage(file = "business.png")
         photo6 = PhotoImage(file = "world.png")
         photo7 = PhotoImage(file = "miscellaneous.png")
+
+        button_configs = { 'height': 200,
+                          'width': 200,
+                          'bd' : 0,
+                          'bg' : 'gray19',
+                          'activebackground' : 'orange1',
+                          'borderwidth': 0,
+                          'highlightthickness': 0}
         
-        c1 = tk.Button(self.parent_label1,text='City',image=photo1 ,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
-                       borderwidth=0 ,highlightthickness = 0)
+        c1 = tk.Button(self.parent_label1,text='City',image=photo1)
+        c1.config(button_configs)
         c1.image = photo1
-        c2 = tk.Button(self.parent_label1,text='yes',image = photo2,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
-                       borderwidth=0 ,highlightthickness =0)
+        
+        c2 = tk.Button(self.parent_label1,text='yes',image = photo2)
+        c2.config(button_configs)
         c2.image = photo2
-        c3 = tk.Button(self.parent_label1,text='yes',image = photo3,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
-                       borderwidth=0 ,highlightthickness =0)
+        
+        c3 = tk.Button(self.parent_label1,text='yes',image = photo3)
+        c3.config(button_configs)
         c3.image = photo3
-        c4 = tk.Button(self.parent_label1,text='yes',image = photo4,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
-                       borderwidth=0 ,highlightthickness =0)
+        
+        c4 = tk.Button(self.parent_label1,text='yes',image = photo4)
+        c4.config(button_configs)
         c4.image = photo4
-        c5 = tk.Button(self.parent_label1,text='yes',image = photo5,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
-                       borderwidth=0 ,highlightthickness =0)
+        
+        c5 = tk.Button(self.parent_label1,text='yes',image = photo5)
+        c5.config(button_configs)
         c5.image = photo5
 
-        c6 = tk.Button(self.parent_label1,text='yes',image = photo6,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
-                       borderwidth=0 ,highlightthickness =0)
+        c6 = tk.Button(self.parent_label1,text='yes',image = photo6)
+        c6.config(button_configs)
         c6.image = photo6
-        c7 = tk.Button(self.parent_label1,text='yes',image = photo7,height = 200 , width = 200,bd = 0 ,bg = 'gray19',activebackground = 'orange1',
-                       borderwidth=0 ,highlightthickness =0)
+
+        c7 = tk.Button(self.parent_label1,text='yes',image = photo7)
+        c7.config(button_configs)
         c7.image = photo7
 
 
@@ -98,7 +108,7 @@ class MainApp:
         c7.grid(row=1,column=2,padx = 20,pady = 20)
 
         root.mainloop()
-        
+     
     
          
         
